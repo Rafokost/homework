@@ -14,4 +14,5 @@ print('the value of H is',H)
 H=int(H)
 
 print(bool(H))
-
+import datetime
+print(datetime.date.today())
