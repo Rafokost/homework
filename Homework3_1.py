@@ -3,7 +3,7 @@ print(datetime.date.today())
 
 U=input('U is inner energy = ')
 U=int(U)
-print(U<10 and U!=5)
+print(U<10 and U not=5)
 
 P=input('P is gas pressure = ')
 P=int(P)
