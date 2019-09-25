@@ -29,8 +29,11 @@ if weather == 'cold':
 if weather == 'cold':
 	if mydress == 'short':
 		print('wear the jacket')
+	elif mydress == 'long':
+		print('you feel good')
 	else:
-	 	print('you feel good')
+		print('input parameters error')
+	 	
 else:
 	print('there is sunshine weather outside')
 
