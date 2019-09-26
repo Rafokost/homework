@@ -25,8 +25,6 @@ if x %2 !=0 or y %2!=0 or z %2!=0:
 weather = input('weather condition ')
 if weather == 'cold':
 	mydress = input('how to dressed ')
-
-if weather == 'cold':
 	if mydress == 'short':
 		print('wear the jacket')
 	elif mydress == 'long':
