@@ -52,11 +52,28 @@ elif temp**2//2 >= 70:
 	power = temp*100//4
 	print('there is no auxilary power',power)
 else:
-	print('Karno cycle is working')'''
-
-for i in range(100,5,-7):
-	print(i)
+	print('Karno cycle is working')
 
 
+sum = 0
+x = int(input("Enter needed number quantity: "))
+for  i in range(1,x+1):
+	next_number = int(input("Enter number # " + str(i) + ": "))
+	sum += next_number
+print(sum/x)
 
+some_string = "hello world"
+for i in some_string:
+	print(i)'''
 
+import random
+hidden_number = random.randint(1,100)
+user_guess = 0
+while not user_guess == hidden_number:
+	user_guess = int(input("Guess a number: "))
+	if user_guess > hidden_number:
+		print("Too high!")
+	elif user_guess < hidden_number:
+		print("Too low!")
+	else:
+		print("Thats right!")
