@@ -11,3 +11,10 @@ for i in range(1,7):
 		for j in range(4,0,-1):
 			if j >= 0:
 				print("* " *j)
+
+# Digit(s) counter in number
+count = 0
+while (number > 0):
+	number = number//10
+	count+=1
+print("There are ", count, "digit(s) in the inserted number")
