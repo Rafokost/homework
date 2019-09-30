@@ -64,7 +64,7 @@ print(sum/x)
 
 some_string = "hello world"
 for i in some_string:
-	print(i)'''
+	print(i)
 
 import random
 hidden_number = random.randint(1,100)
@@ -77,3 +77,57 @@ while not user_guess == hidden_number:
 		print("Too low!")
 	else:
 		print("Thats right!")
+
+
+for i in range(1,4):
+	for j in range(1,5):
+		print(i,"times",j, "equal", i*j)
+
+
+for i in range(0,12):
+	if i % 2 !=0:
+		pass
+	else:
+		print(i)
+
+def add_to_numbers(num1, num2):
+	return num1 + num2
+
+first_number = int(input("Enter first number "))
+second_number = int(input("Enter second number "))
+
+
+print(add_to_numbers(first_number,second_number))
+
+def print_hello_world():
+	print("Hello World")
+
+print_hello_world()'''
+
+
+def mini_prog(x,y,z):
+	count = 0
+	print(range(x,y,z))
+	for i in range(x,y,z): 
+		if x>0 and z!=0:
+			count+=1
+	return count
+x = int(input())
+y = int(input())
+z = int(input())
+
+print(mini_prog(x,y,z))
+
+def even_or_odd(number):
+	if number % 2 == 0:
+		return "Even"
+	return "odd"
+x = int(input("Enter number: "))
+print(even_or_odd(x))
+
+
+
+
+
+	
+
