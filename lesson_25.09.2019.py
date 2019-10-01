@@ -102,7 +102,7 @@ print(add_to_numbers(first_number,second_number))
 def print_hello_world():
 	print("Hello World")
 
-print_hello_world()'''
+print_hello_world()
 
 
 def mini_prog(x,y,z):
@@ -116,7 +116,7 @@ x = int(input())
 y = int(input())
 z = int(input())
 
-print(mini_prog(x,y,z))
+print(mini_prog(x,y,z))'''
 
 def even_or_odd(number):
 	if number % 2 == 0:
@@ -125,6 +125,10 @@ def even_or_odd(number):
 x = int(input("Enter number: "))
 print(even_or_odd(x))
 
+
+def two_numbers(num1, num2)
+	x = num1**num2
+print(x)
 
 
 
