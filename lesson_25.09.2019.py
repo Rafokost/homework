@@ -217,8 +217,7 @@ ms = "This string is not a number!"
 
 try:
 	print("Converting my string to int...")
-	1/0
-	print("String #" + 1 + ": " + ms)
+	print("String #" + "1" + ": " + ms)
 	my_int = int(ms)
 	print(my_int)
 except ValueError:
@@ -227,11 +226,51 @@ except TypeError:
 	print("Can't concatianate number with string")
 except:
 	print("Unknown error")
+else:
+	print("no errors occured")
 print("Done")
 
+try:
+	input_file = open("NumberFile.txt", mode = "r")
+
+	try:
+		for line in inpute_file:
+			print(int(line))
+	except ValueError:
+		print("A value error occured")
+
+	else:
+		print("No errors occured")
+
+	finally:
+		input_file.close()
+
+except IOError:
+	print("An error occured reading the file!")
+
+
+def zero_division():
+	print(1/0)
+
+try:
+	zero_division()
+except Exception as error:
+	print(error)
 
 
 
+while True:
+	try:
+		x = int(input("Enter a number"))
+		y = int(input("Enter another number"))
+		print(x, "/", y, "=", x/y)
+		break
+	except ZeroDivisionError:
+		print("Can't divide by zero")
+	except ValueError:
+		print("That does not look like a number!")
+	except:
+		print("Something unexpected happened")
 
 	
 
