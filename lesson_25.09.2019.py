@@ -116,7 +116,7 @@ x = int(input())
 y = int(input())
 z = int(input())
 
-print(mini_prog(x,y,z))'''
+print(mini_prog(x,y,z))
 
 def even_or_odd(number):
 	if number % 2 == 0:
@@ -126,9 +126,109 @@ x = int(input("Enter number: "))
 print(even_or_odd(x))
 
 
-def two_numbers(num1, num2)
+def two_numbers(num1,num2):
 	x = num1**num2
-print(x)
+	return x
+num1 = int(input("num1 = "))
+num2 = int(input("num2 = "))
+print(two_numbers(num1,num2))
+
+
+def currency_amount(amount, currency):
+    amount = str(amount)
+    if currency == "JPY":
+        return "¥" + amount
+    elif currency == "USD":
+        return "$" + amount    
+    elif currency == "EUR":
+        return "€" + amount
+    else:
+        return amount
+print(currency_amount(5, "JPY"))
+
+
+def check_balance(price_of_item,user_balance):
+	tax = price_of_item * 0.3
+	if (price_of_item + tax) < user_balance:
+		print ("You can buy the needed item")
+	else:
+		print("Your sellary is low try work harder")
+
+price_of_item = int(input("Enter price_of_item = "))
+user_balance = int(input("Enter user_balance = "))
+
+check_balance(price_of_item,user_balance)
+_________________________________
+ameria = "0001"
+convers = "0002"
+ineco = "0003"
+evoca = "0004"
+american_express = "0005"
+
+balance = 500
+
+def check_balance(purchase_price):
+	if purchase_price > 0:
+		return "You have not enough balance"
+	elif purchase_price <= balance
+	else:
+		return "Your balance after purchase is" + str(purchase_price - balance)
+
+def validate_credit_card(card_number):
+	if len(card_number) == 16 and card_number[0:4] != american_express:
+		return True
+	elif len(card_number) == 15 and card_number[0:4] == american_express:
+		return True
+	else:
+		return False
+
+def check_card_bank(card_number):
+	if card_number[0:4] == ameria:
+		return "Ameria Bank"
+	elif card_number[0:4] == convers:
+		return "Evoca Bank"
+	elif card_number[0:4] == ineco:
+		return "Ineco Bank"
+	elif card_number[0:4] == evoca:
+		return "Evoca Bank"
+	else:
+		return "American Express Bank"
+
+card = input("Enter your card number: ")
+
+if validate_credit_card(card):
+	print("Your credit card belongs to " + check_card_bank(card))
+	purchase = 501
+	while check_balance(int(purchase)) == "You have not enough balance" or check_balance(int(purchase):
+		purchase = input("Enter your purchase price") 
+	input("Enter your purchase price")
+	print(check_balance(int(purchase)))
+else:
+	print("You've entered wrong credentials")'''
+
+
+try:
+	print()/5
+	print("hi")
+except:
+	print("error occured")
+
+ms = "This string is not a number!"
+
+try:
+	print("Converting my string to int...")
+	1/0
+	print("String #" + 1 + ": " + ms)
+	my_int = int(ms)
+	print(my_int)
+except ValueError:
+	print("Can't convert; ms to a number")
+except TypeError:
+	print("Can't concatianate number with string")
+except:
+	print("Unknown error")
+print("Done")
+
 
 
 
