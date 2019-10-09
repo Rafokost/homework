@@ -204,7 +204,11 @@ if validate_credit_card(card):
 	input("Enter your purchase price")
 	print(check_balance(int(purchase)))
 else:
-	print("You've entered wrong credentials")'''
+	print("You've entered wrong credentials")
+
+
+
+
 
 
 try:
@@ -273,4 +277,68 @@ while True:
 		print("Something unexpected happened")
 
 	
+# id explanation
+my_int = 14
+print(id(my_int))
+# is conected id explanation
+print(5 is 6)
+print(id(5) == id(6))
 
+# chr working
+print(chr(85))
+# ord working
+print(ord("!"))
+
+text = input("Enter text:\n ")
+count = 0
+for i in text:
+	if ord(i) == ord("!"):
+		count += 1
+print("The count of ! is: ", count)
+
+#slicing string
+print(text[0])
+print (text[0:5])
+
+# find operator
+print(text.find("g"))
+print(text.find("j", 2,8))
+
+# Split 
+print(text.split(" "))
+print(text.capitalize())
+print(text.lower())
+print(text.upper())
+
+print(text.replace("gh", "changed"))
+print(text.title())
+
+
+# lesson work
+def get_middle_three_chars(sample_str):
+	middle_index = int(len(sample_str)/2)
+	print("Original string is", sample_str)
+	middle_three = sample_str[middle_index - 1:middle_index + 2]
+	print("Middle three chars are", middle_three)
+
+print(get_middle_three_chars("JhonDipPeta"))
+print(get_middle_three_chars("Jasonayh"))'''
+
+
+a = (1,2)
+print(a)
+print(a[0], a[1])
+
+def tuple1():
+	un = input("Enter your name ")
+	us = input("Enter your surname ")
+	return un, us
+
+ui = tuple1()
+print("Your name is " + ui[0])
+print("Your surname is " + ui[1])
+
+
+nested_tuple = ((1,2), (3,4), (5,6))
+print(nested_tuple[0])
+print(nested_tuple[0][0])
