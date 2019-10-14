@@ -322,9 +322,9 @@ def get_middle_three_chars(sample_str):
 	print("Middle three chars are", middle_three)
 
 print(get_middle_three_chars("JhonDipPeta"))
-print(get_middle_three_chars("Jasonayh"))'''
+print(get_middle_three_chars("Jasonayh"))
 
-
+________________
 a = (1,2)
 print(a)
 print(a[0], a[1])
@@ -360,3 +360,167 @@ print(my_list, " : poping")
 
 del my_list[-5:]
 print(my_list, ": After deleting the last five items")
+
+
+
+my_list = [1, 2, 3, 4]
+
+my_list.append(5)
+print(my_list, ": After appending five")
+
+new_list = [6,7,8]
+my_list.extend(new_list)
+print(my_list, ": After extending")
+
+my_list.insert(0, 0)
+print(my_list, ": After inserting zero")
+
+def average(in_list):
+	sum = 0
+	for number in in_list:
+		sum += number
+	return sum / len(in_list)
+
+my_list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+my_list2 = [88, 55 ,68 ,54 ,25 ,1 ,2 ,78]
+
+print("The average of my_list is: ", average(my_list1))
+print("The average of my_list2 is: ", int(average(my_list2)))
+
+
+def two_D_average(in_2d_list):
+	result = []
+
+	for num_list in in_2d_list:
+		sum = 0
+		for number in num_list:
+			sum += number
+		result.append(sum // len(num_list))
+
+	return result
+
+my_2d_list = [[61,32,12,123],[123,131,131,123],[4,1,2]]
+print("average:", two_D_average(my_2d_list))
+
+
+l1 = [52,45,45,78,100,64,28,100,100,1,0]
+big = 0
+for i in l1:
+	if i > big:
+		big =i
+print(big)
+
+
+
+
+
+mint1 = 1
+mint2 = 2
+mint3 = 3
+
+out_put_file = open("OutputFile.txt", "w")
+
+out_put_file.write(str(mint1))
+out_put_file.write(str(mint2))
+out_put_file.write(str(mint3))
+
+out_put_file.close()
+
+
+myintlist = ["gfh","gtt","tyu","eew","yuy"]
+
+out_put_file = open("OutputFile.txt", "w")
+for line in myintlist:
+	out_put_file.write(line)
+
+out_put_file.close()
+
+
+myintlist = ["gfh","gtt","tyu","eew","yuy"]
+
+out_put_file = open("OutputFile.txt", "w")
+out_put_file.writelines(line)
+out_put_file.close()
+
+
+myintlist = ["gfh","gtt","tyu","eew","yuy"]
+
+out_put_file = open("OutputFile.txt", "a")
+
+for i in range(len(myintlist)):
+	myintlist[i] += "\n"
+
+	out_put_file.writelines(line)
+out_put_file.close()
+
+myintlist = ["gfh","gtt","tyu","eew","yuy"]
+
+out_put_file = open("OutputFile.txt", "r")
+
+print(out_put_file.readline())
+print(out_put_file.readline())
+
+out_put_file.close()
+
+names_list = []
+out_put_file = open("OutputFile.txt", "r")
+
+for line in out_put_file:
+	names_list.append(line)
+
+out_put_file.close()
+print(names_list)
+
+
+p = int(input("Enter a number of list's carachter: "))
+list1 = []
+for i in range(p):
+	string = input("Enter a string: ")
+	list1.append(string)
+
+def new_list_creator(listik,n):
+	list2 = []
+	for i in listik:
+		print(i)
+		if len(i) >= n:
+			list2.append(i)
+
+	return list2
+
+listik = ["dfgsdf","sdfgsdf","dfg","hh"]
+n = int(input("Enter : "))
+print(new_list_creator(listik,n))
+
+list_5 = []
+def list_character_place_changer(list_new):
+	count = 0
+	for i in list_new:
+		count += 1
+		print(i)
+		if count == 1:
+			list_new.insert(3,i)
+			list_new.remove(0,i)
+		elif count == 2:
+			list_new.insert(4,i)
+			list_new.remove(2,i)
+	return list_new
+
+list_new = ["uiy","kjhfg","kjhf","hh","yiui"]
+print(list_character_place_changer(list_new))'''
+
+
+
+human = {"name":"High","Temperature":"Low","number": 15}
+
+print(human["number"])
+print(human)
+print(human["name"], human["Temperature"])
+
+human["number"] = 30
+
+
+human["have_pet"] = False
+print(human)
+
+del human["name"]
+print(human)
