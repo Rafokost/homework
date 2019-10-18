@@ -506,7 +506,7 @@ def list_character_place_changer(list_new):
 	return list_new
 
 list_new = ["uiy","kjhfg","kjhf","hh","yiui"]
-print(list_character_place_changer(list_new))'''
+print(list_character_place_changer(list_new))
 
 
 
@@ -524,3 +524,145 @@ print(human)
 
 del human["name"]
 print(human)
+
+print(human.keys())
+print(human.values())
+
+for value in human.values():
+	print(value)
+
+
+fruits = {"apple": 5, "orange": 14, "bananas": 4,"pomegranade":8}
+
+for key in fruits.keys():
+	if fruits[key] > 5:
+		print(key)
+
+print(fruits.items())
+
+for (name,kg) in fruits.items():
+	print(name, "is", kg, "In store")
+
+# marks = {"Gor Smbatyan": 26,"David Grigoryan": 26,"Vardges Hovhannisyan":26, "Rafayel Kostanyan": 28,"Mehrabyan Shahen": 30 }
+# print(marks)
+
+# marks["David Grigoryan"] = 15
+
+# print(marks)
+
+classes = {"Math":["David","Lucy","Dana"],"Physics": ["Addision", "Benjamin"],
+"Chemistry": ["Sara", "Pele"]}
+
+print("Students in math class", classes["Math"])
+classes["Math"].append("Jirayr")
+
+print("Students in math class", classes["Math"])
+
+
+people = {"Dany":{"Age": 24, "is married": False}, "Diana":{"Age": 32, "is married": True}}
+print(people.keys())
+print(people.values())
+
+sample_text = "a set of words that is complete in itself, typically containing a subject and predicate, conveying a statement, question, exclamation, or command, and consisting of a main clause and sometimes one or more subordinate clauses"
+
+words_dict = {}
+
+sample_text = sample_text.lower()
+sample_text = sample_text.replace(",","")
+sample_text = sample_text.replace(".", "")
+sample_text = sample_text.split(" ")
+
+for word in sample_text:
+	if word in words_dict.keys():
+		words_dict[word] += 1
+	else:
+		words_dict[word] = 1
+
+
+for (word, amount) in words_dict.items():
+	if amount > 1:
+		print(word, ":", amount)'''
+
+# objects
+
+class Person:
+	def __init__(self):
+		self.first_name = "[no first name]"
+		self.last_name = "[no last name]"
+		self.eye_color = "[no eye color]"
+
+
+my_person = Person()
+
+print(my_person.first_name)
+print(my_person.last_name)
+print(my_person.eye_color)
+
+
+
+class Name:
+
+	def __init__(self):
+		self.first_name = "[no first name]"
+		self.last_name = "[no last name]"
+
+class Person:
+
+	def __init__(self):
+		self.name = Name()
+		self.eye_color = "[no eye color]"
+
+
+my_person = Person()
+
+print(my_person.name.first_name)
+print(my_person.name.last_name)
+print(my_person.eye_color)
+
+
+# Encupsulating
+
+class Person:
+
+	def __init__(self,first_name, last_name):
+		self.first_name = first_name
+		self.last_name = last_name
+		self.eye_color = "[no eye color]"
+
+
+my_person = Person("Jirayr", "Melikyan")
+
+print(my_person.first_name)
+print(my_person.last_name)
+print(my_person.eye_color)
+
+
+#class realization example
+
+class BankAccount:
+	def __init__(self,name, balance = 0.0):
+		self.log("Account created!")
+		self.name = name
+		self.balance = balance
+
+	def getBalance(self):
+		self.log("Balance checked at " + str(self.balance))
+		return self.balance
+
+	def deposit(self,amount):
+		self.balance += amount
+		self.log("+" + str(amount) + ": " + str(self.balance))
+
+	def withdraw(self, amount):
+		self.balance -= amount
+		self.log("-" + str(amount) + "+ " + str(self.balance))
+
+	def log(self,message):
+		print(message)
+
+
+my_bank_account = BankAccount("Jirayr Melikayn")
+my_bank_account.deposit(20.0)
+my_bank_account.getBalance()
+my_bank_account.withdraw(10.0)
+my_bank_account.getBalance()
